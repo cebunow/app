@@ -19,7 +19,28 @@
 
 }
 
+@media only screen and (max-width: 480px) {
 
+ 
+#statContainer {
+  font-size: .7em;
+  text-align: left;
+
+
+  }
+.scard__category {
+font-size: .6em;
+    letter-spacing: 2px;
+white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scard {
+}
+
+
+}
 
 .scard {
   margin-right: 25px;
@@ -43,7 +64,6 @@ border-bottom-right-radius: 12px;
 
 .scard__category {
     text-transform: uppercase;
-    font-size: 13px;
     letter-spacing: 2px;
     font-weight: 500;
   color: #868686;
@@ -81,10 +101,14 @@ font-weight: 700;
     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: auto;
   box-shadow: 2px 13px 10px -7px rgba(0, 0, 0,0.1);
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .cardwidth {
   width: 20%;
 }
+
+
