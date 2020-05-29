@@ -17,5 +17,5 @@ xmlhttp.onreadystatechange = function() {
 
 
 
-xmlhttp.open("GET", "../../data/covid.json", true);
+xmlhttp.open("GET", "/data/covid.json", true);
 xmlhttp.send();
