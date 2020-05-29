@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cebu Covid Tracker - Cebu City, Mandaue City, Lapu-Lapu City</title>
+	<meta content="COVID-19 Tracker for Cebu City, Mandaue City, Lapu-Lapu City & General Information on Coronavirus (COVID-19) symtomps, emergency hotlines and more.." name="description">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<meta content="#5CB377" name="theme-color">
+	<meta content="CEBU TRACKER - Coronavirus (COVID-19)" property="og:title">
+	<meta content="COVID-19 Tracker for Cebu City, Mandaue City, Lapu-Lapu City & General Information on Coronavirus (COVID-19) symtomps, emergency hotlines and more.." property="og:description">
+	<meta content="" property="og:image">
+	<meta content="image/png" property="og:image:type">
+	<meta content="OW" property="og:author">
+	<meta content="OW" property="article:author">
+	<meta content="CEBU - Coronavirus (COVID-19)" property="og:site_name">
+	<meta content="article" property="og:type">
+	<meta content="summary_large_image" name="twitter:card">
+	<meta content="CEBU TRACKER - Coronavirus (COVID-19)" name="twitter:title">
+	<meta content="COVID-19 Tracker for Cebu City, Mandaue City, Lapu-Lapu City & General Information on Coronavirus (COVID-19) symtomps, emergency hotlines and more.." name="twitter:description">
+	<meta content="" name="twitter:image:src">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lumen/bootstrap.min.css" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/css/box.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="wrap">
+			<nav class="logos">
+				<div class="alertNav">
+					<div class="alert__text">
+						<ul>
+							<li><img height="90px" src="images/coronavirus.png" width="auto"></li>
+							<li style="list-style: none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+														<li style="list-style: none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+																					<li style="list-style: none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+
+							<li>
+								<h1 style="text-transform:uppercase;">CEBU COVID UPDATES
+								</h1>
+
+									<h4 align="center">COVID-19 (CORONAVIRUS)</h4>
+								<h2 align="center">Tracking & Public Information</h2>
+
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+		
+
+			<div class="statContainer">   <!-- COVID STAT -->
+
+    <section class="scards">
+
+
+      <article class="scard scard--2">
+
+        <div class="scard__info">         
+         <span class="">NATION WIDE</span>
+
+          <span style="color: #7A43D9"  class="scard__category">Confirmed</span>
+          <h3 style="color: #7A43D9" class="scard__title">
+            <span id="nationwide"></span>
+          </h3>
+        </div>
+      </article>
+
+      <article class="scard scard--2">
+
+        <div class="scard__info">
+      <span class="">CEBU ALL</span>
+
+          <span style="color: #5CB377" class="scard__category">confirmed </span>
+          <h3 style="color: #5CB377" class="scard__title"></h3>
+		 <span id="cebu_total"></span>
+
+        </div>
+      </article>
+
+      <article class="scard card--2">
+
+        <div class="scard__info">
+  <span style="display: block" class="">CEBU ALL</span>
+
+          <span style="color: #E947AE" class="scard__category">DEATHS</span>
+          <h3 style="color: #E947AE" class="scard__title">
+            <span id="cebu_deaths"></span>
+          </h3>
+        </div>
+      </article>
+
+    </section>
+			</div>
+
+			<div class="statContainer">   <!-- COVID STAT -->
+
+    <section class="scards">
+
+
+      <article class="scard scard--2">
+
+        <div class="scard__info">
+        	         <span class="">CEBU CITY</span>
+
+          <span class="scard__category">CONFIRMED</span>
+          <h3 style="color: #2A33D9" class="scard__title">
+            <span id="cebu_city"></span>
+          </h3>
+        </div>
+      </article>
+
+      <article class="scard scard--2">
+
+        <div class="scard__info">
+        	        	         <span class="">MANDAUE</span>
+
+          <span class="scard__category">CONFIRMED</span>
+          <h3 style="color: #622377" class="scard__title">
+            <span id="mandaue"></span>
+          </h3>
+        </div>
+      </article>
+
+      <article class="scard card--2">
+
+        <div class="scard__info">
+        	        	         <span class="">LAPU LAPU</span>
+
+          <span class="scard__category">CONFIRMED</span>
+          <h3 style="color: darkorange" class="scard__title">
+            <span id="lapulapu"></span>
+          </h3>
+        </div>
+      </article>
+
+    </section>
+			</div>
+
+
+
+
+	<h5 align="center">Last Updated: <span id="time_updated"></span></h5>
+
+<h6 class="container"><b>Disclaimer: </b>
+<em>The data above was extracted from the official DOH portal, Regional/LGU sites and/or major media outlets (SunStar/CebuDailyNews). Discrepancies in the total tally may occassionally be observed.</em> </h6>
+			<nav class="primary" style="margin-bottom:30px">
+				<button class="btn btn-lg btn-success" data-target="#modal1" data-toggle="modal" style="font-size:.9em" type="button">How to Protect Yourself &nbsp;<i class="fa fa-chevron-right"></i></button><br>
+				<br>
+				<button class="btn btn-lg btn-success" data-target="#modal2" data-toggle="modal" style="font-size:.9em" type="button">What to do if you are sick &nbsp;<i class="fa fa-chevron-right"></i></button>
+			</nav>
+			<div aria-hidden="true" aria-labelledby="modal1" class="fade modal" id="modal1" role="dialog" tabindex="-1">
+				<div class="modal-autoheight modal-dialog modal-dialog-centered modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title" id="modal1">How to Protect Yourself</h1><button aria-label="Close Window" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+						</div>
+						<div class="modal-body" style="background-color:#fafafa">
+							<section>
+								<h2>1. Know How it Spreads</h2>
+								<div style="display:flex;justify-content:center"><img class="d-block img-fluid mx-auto rounded" src="images/handshake.svg"> <img class="d-block img-fluid mx-auto rounded" src="images/cough.svg"> <img class="d-block img-fluid mx-auto rounded" src="images/sneeze.svg"></div><br>
+								<p class="modalText center" style="color:#8b0000">TOUCHING. COUGHING. SNEEZING</p>
+								<ul class="modalText">
+									<li>The best way to prevent COVID-19 is to avoid being exposed to this virus.</li>
+									<li style="list-style:none"><br>
+									The virus spreads mainly from person-to-person:<br>
+									<br></li>
+									<li>Between people who are in close contact with one another (within about 6 feet).</li>
+									<li>Through respiratory droplets produced when an infected person coughs or sneezes.</li>
+									<li>These droplets can land in the mouths or noses of people who are nearby or possibly be inhaled into the lungs.</li>
+								</ul>
+								<section>
+									<br>
+									<br>
+									<section>
+										<h2>2. Steps to Protect Yourself</h2>
+										<div style="display:flex;justify-content:center"><img class="d-block img-fluid mx-auto rounded" src="images/hand-wash.svg"> <img class="d-block img-fluid mx-auto rounded" src="images/dont-touch.svg"> <img class="d-block img-fluid mx-auto rounded" src="images/keep-distance.svg"></div><br>
+										<p class="modalText center" style="color:#8b0000">WASH YOUR HANDS.<br>
+										AVOID TOUCHING.<br>
+										SOCIAL DISTANCING.</p>
+										<ul class="modalText">
+											<li>Wash your hands often with soap and water for at least <b>20 seconds</b> especially after you have been in a public place, or after blowing your nose, coughing, or sneezing.<br>
+											<br></li>
+											<li>Avoid touching your eyes, nose, and mouth with unwashed hands.</li>
+											<li style="list-style:none"><br></li>
+											<li><b>SOCIAL DISTANCING:</b> Keep distance between yourself and strangers.</li>
+										</ul>
+										<section></section>
+									</section>
+								</section>
+							</section>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-lg btn-secondary btn-block" data-dismiss="modal" type="button">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div aria-hidden="true" aria-labelledby="modal2" class="fade modal" id="modal2" role="dialog" tabindex="-1">
+				<div class="modal-autoheight modal-dialog modal-dialog-centered modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title" id="modal2">What to do if you are Sick</h1><button aria-label="Close Window" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+						</div>
+						<div class="modal-body" style="background-color:#fafafa">
+							<div class="alert alert-dark alert-dismissible">
+								<h4 class="alert-heading">Emergency Warning Signs of COVID-19</h4>
+								<p class="mb-0">If You Have The Following, Call any of the Hotline numbers for Medical assistance:</p>
+								<ul style="font-size:1.2em;font-weight:700">
+									<li>Trouble breathing</li>
+									<li>Persistent pain or pressure in the chest</li>
+									<li>New confusion or inability to arouse</li>
+									<li>Bluish lips or face</li>
+								</ul>
+							</div>
+							<section>
+								<h2>Stay Home</h2>
+								<div style="display:flex;justify-content:center"><img class="d-block img-fluid mx-auto rounded" src="images/alone.svg"></div><br>
+								<p class="modalText center" style="color:#8b0000">If you do not have warning signs - Stay Home</p>
+								<ul class="modalText">
+									<li>Stay home from work, school, and away from other public places.</li>
+									<li style="list-style: none"><br></li>
+									<li>If you must go out, avoid using any kind of public transportation, ridesharing, or taxis.</li>
+									<li style="list-style: none"><br></li>
+									<li>Get rest and stay hydrated.</li>
+									<li style="list-style: none"><br></li>
+									<li>Separate yourself from other people in your home, this is known as home isolation</li>
+									<li style="list-style: none"><br></li>
+									<li>There is currently no vaccine to prevent coronavirus disease 2019 (COVID-19).</li>
+								</ul>
+							</section><br>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-lg btn-secondary btn-block" data-dismiss="modal" type="button">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- initial data position -->
+			<div class="hotline " style=" text-align:center;font-size:1em">
+				<div class="card-body">
+					<h3 class="card-title" style="color: red; font-weight:900">EMERGENCY MEDICAL CARE - CEBU CITY</h3>
+					<p class="card-text">VSMMC (Vicente Sotto):  032-253-9882</p>
+					<p class="card-text">Chong Hua:  032 255-8000</p>
+					<p class="card-text">RAPID Ambulance:  032 413-2165</p>
+				</div>
+				<div class="card-body" style="color: darkred">
+					<h3>DOH COVID Hotline:</h3> <p>1555 / 02-894-26843</p>
+				</div>
+					<div class="card-body">
+					<h3 class="card-title" style="color:red; font-weight:900">MANDAUE CITY HOTLINE</h3>
+					<h6 class="card-subtitle mb-2 text-muted">COVID-19 FAST LANE</h6>
+					<p class="card-text">032 383-1658</p>
+					<p class="card-text">032 230-4500 LOCAL 1000</p>
+					<p class="card-text">(0948) 988 6872</p>
+					<p class="card-text">Red Cross LAPU-LAPU:  032 383-2806</p>
+
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="alert bg-warning">
+			<div class="wrap alert__wrap">
+				<p class="center alert__text" style="color:#000"><strong class="alert__label">UPDATE</strong> <span>Cebu City to be placed under MODIFIED ENHANCED COMMUNITY QUARANTINE (MECQ) until June 15, 2020.</span></p>
+				<div class="alert__button">
+					<form action="https://www.pna.gov.ph/articles/1104206">
+						<button class="btn btn-lg btn-secondary" type="submit">Learn More</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="wrap">
+			<nav class="secondary">
+				<ul>
+					<li>
+						<a data-target="#modal3" data-toggle="modal" href="">What are the <strong>symptoms</strong>?</a>
+					</li>
+					<li style="list-style: none; display: inline">
+						<div aria-hidden="true" aria-labelledby="modal3" class="fade modal" id="modal3" role="dialog" tabindex="-1">
+							<div class="modal-autoheight modal-dialog modal-dialog-centered modal-lg" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title" id="modal3">SYMPTOMS OF COVID-19</h1><button aria-label="Close Window" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+									</div>
+									<div class="modal-body" style="background-color:#fafafa">
+										<h2>FEVER</h2>
+										<div style="display:flex;justify-content:center"><img class="d-block img-fluid mx-auto rounded" src="images/fever.svg"></div><br>
+										<h2>COUGH</h2>
+										<div style="display:flex;justify-content:center"><img class="d-block img-fluid mx-auto rounded" src="images/cough.svg"></div><br>
+										<h2>DIFFICULTY BREATHING</h2>
+										<div style="display:flex;justify-content:center"><img class="d-block img-fluid mx-auto rounded" src="images/difficulty-breathing.svg"></div><br>
+										<br>
+										<p class="modalText center" style="color:#8b0000">The most common symptoms of COVID-19 are fever, tiredness and dry cough. Few patients experience aches and pains, nasal congestion, runny nose, sore throat or diarrhea.These symptoms may appear 2-14 days after exposure.</p>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-lg btn-secondary btn-block" data-dismiss="modal" type="button">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a data-target="#modal4" data-toggle="modal" href="">Who is at <strong>highest risk</strong>?</a>
+						<div aria-hidden="true" aria-labelledby="modal4" class="fade modal" id="modal4" role="dialog" tabindex="-1">
+							<div class="modal-autoheight modal-dialog modal-dialog-centered modal-lg" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title" id="modal4">Who are at High Risk?</h1><button aria-label="Close Window" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+									</div>
+									<div class="modal-body" style="background-color:#fafafa">
+										<h2>High Risk Patients Must Seek Immediate Medical Care</h2>
+										<div style="display:flex;justify-content:center"><img class="d-block img-fluid mx-auto rounded" src="images/elderly.svg"> <img class="d-block img-fluid mx-auto rounded" src="images/asthma.svg"> <img class="d-block img-fluid mx-auto rounded" src="images/diabetes.svg"> <img class="d-block img-fluid mx-auto rounded" src="images/heart-problem.svg"></div><br>
+										<ul class="modalText">
+											<li>People aged 65 years and older.</li>
+											<li>Chronic lung disease or moderate to severe Asthma.</li>
+											<li>Cancer or immunocompromised including HIV patients.</li>
+											<li>Serious Heart Disease</li>
+											<li>Diabetes, renal failure, or liver disease.</li>
+										</ul><br>
+										<p class="modalText center" style="color:#8b0000">Older adults and people of any age who have serious underlying medical conditions might be at higher risk for severe illness from COVID-19.</p>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-lg btn-secondary btn-block" data-dismiss="modal" type="button">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<div class="columns">
+				<div class="column resources">
+					<h2><span>RESOURCES</span></h2>
+					<nav class="tertiary">
+						<ul>
+							<li>
+								<a href="https://www.doh.gov.ph/COVID-19/FAQs-Filipino" target="_blank">F.A.Q (in Filipino)</a>
+							</li>
+							<li>
+								<a href="https://www.doh.gov.ph/COVID-19/FAQs" target="_blank">F.A.Q (in English)</a>
+							</li>
+							<li>
+								<a href="https://www.doh.gov.ph/sites/default/files/Updated_Decision_Tool_March_16.pdf" target="_blank">Triage Algorithm for Medical Professionals</a>
+							</li>
+							<li>
+								<a href="https://www.doh.gov.ph/2019-nCov/interim-guidelines" target="_blank">DOH Interim Guidelines</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="column latest">
+					<h2><a>Latest news</a></h2>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="wrap">
+			<nav class="footer">
+				<br>
+				<p style="color:#e5e5e5;text-transform:uppercase">GET OFFICIAL UPDATES FROM </p>
+				<ul>
+									<li>
+						<a href="https://web.facebook.com/CityofCebuOfficial/" target="_blank">Cebu City Public Information Office</a>
+					</li>
+					<li>
+						<a href="https://web.facebook.com/MandaueCityPublicInformationOffice/" target="_blank">Mandaue City Public Information Office</a>
+					</li>
+	
+					<li>
+						<a href="https://www.doh.gov.ph/2019-nCoV" target="_blank">Department of Health (DOH)</a>
+					</li>
+					<li>
+						<a href="https://ncovtracker.doh.gov.ph/" target="_blank">COVID Tracker Philippines</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="flag"><img src="images/philippines.svg"></div>
+		</div><br>
+		<p class="container" align="center" style="color:#e5e5e5;">This website is NOT an official source for information regarding COVID-19 or related statistics. All data presented on this website was extracted from official sources, please see our full <a>disclaimer and terms</a>.</p>
+		<p class="container" align="center" style="color:#e5e5e5;">All content released under MIT License unless otherwise specified.</p>
+
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+	</script>
+
+    <script src="assets/js/script.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.js">
+	</script>
+	<script>
+	!function(){var e=document.querySelector(".latest");if(e){var c=document.createElement("ol");c.className="latest-news",e.appendChild(c);var t=new XMLHttpRequest;t.open("GET","data/news.json"),t.setRequestHeader("Accept","application/json"),t.onload=function(){if(200===t.status){try{var e=JSON.parse(t.responseText)}catch(e){return}if(e&&e.success&&e.data){var d={weekday:"long",year:"numeric",month:"long",day:"numeric"};e.data.forEach(function(e){if(e.title&&e.date&&e.link){var t=document.createElement("li"),a=document.createElement("a"),n=document.createElement("time"),o=new Date(e.date);isNaN(o.getTime())||(n.appendChild(document.createTextNode(o.toLocaleDateString(void 0,d))),a.appendChild(n)),a.href=e.link,a.appendChild(document.createTextNode(e.title)),t.appendChild(a),c.appendChild(t)}})}}},t.send()}}() 
+	</script>
+	<script>
+	function resize(){var o=$(window).height();$(".modal-autoheight .modal-body").css({width:"auto",height:o-200+"px"})}$(function(){0<$(".modal-autoheight").length&&($(".modal").on("show.bs.modal",resize),$(window).on("resize",resize))})
+	</script>
+</body>
+</html>
