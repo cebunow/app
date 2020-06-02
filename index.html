@@ -382,7 +382,76 @@
 			<div class="flag"><img src="images/philippines.svg"></div>
 		</div><br>
 		<p class="container" align="center" style="color:#e5e5e5;">This website is NOT an official source for information regarding COVID-19 or related statistics. All data presented on this website was extracted from official sources, please see our full <a>disclaimer and terms</a>.</p>
-		<p class="container" align="center" style="color:#e5e5e5;">All content released under MIT License unless otherwise specified.</p>
+		<p class="container" align="center" style="color:#e5e5e5;">All content released under MIT License unless otherwise specified.</p><br>
+
+<p class="center">	<a  style="color:white" data-target="#modalContact" data-toggle="modal" href=""><strong>Contact Us</strong></a></p>
+
+<!-- CONTACT  -->
+					<div aria-hidden="true" aria-labelledby="modalContact" class="fade modal" id="modalContact" role="dialog" tabindex="-1">
+				<div class="modal-autoheight modal-dialog modal-dialog-centered modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title" id="modal2">Contact Form</h1><button aria-label="Close Window" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+						</div>
+						<div class="modal-body" style="background-color:#fafafa">
+							<div class="alert alert-primary alert-dismissible">
+								Kindly use the form below to contact us for enquiries. 
+							</div>
+							<section>
+
+                <div class="container">
+                    <div class="row justify-content-center no-gutters">
+                        <div class="col-md-10 col-lg-8">
+                                <form class="text-left form-email row mx-0"  id="contact"  action="https://formspree.io/meqrgavr"   method="POST" >
+                                    <div class="col-md-6">
+                                        <span>Full Name:</span>
+                                        <input type="text" name="name" class="validate-required" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <span>Location:</span>
+                                        <input type="text" name="company" class="validate-required" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <span>Email Address:</span>
+                                        <input type="email" name="email" class="validate-required validate-email" />
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <span>Contact Number:</span>
+                                        <input type="tel" name="phone" />
+                                    </div>
+                                    <div class="col-md-2">
+                                        <p>Your question/concern:</p>
+                                        <textarea rows="7"  cols="50" name="message" class="validate-required"></textarea>
+                                    </div>
+                                    
+                                    <div class="col-md-12 boxed">
+    
+							<button id="contact-button" type="submit" class="btn btn-lg btn-success " >Submit</button>
+
+
+                                         <p id="contact-status"></p>
+                                    </div>
+                                </form>
+                            
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+
+
+
+
+							</section>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-lg btn-secondary btn-block" data-dismiss="modal" type="button">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
 
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
@@ -399,6 +468,8 @@
 	function resize(){var o=$(window).height();$(".modal-autoheight .modal-body").css({width:"auto",height:o-200+"px"})}$(function(){0<$(".modal-autoheight").length&&($(".modal").on("show.bs.modal",resize),$(window).on("resize",resize))})
 	</script>
 
+	<script src="assets/js/contact.js">
+	</script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167456021-3"></script>
 <script>
